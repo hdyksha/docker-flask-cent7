@@ -3,7 +3,7 @@ FROM centos:7
 RUN yum -y update && yum clean all
 
 # set locale
-RUN yum reinstall -y glibc-common && yum clean all
+RUN yum reinstall -y glibc-common
 RUN localedef -f UTF-8 -i ja_JP ja_JP.UTF-8
 ENV LANG ja_JP.UTF-8
 ENV LANGUAGE ja_JP:ja
